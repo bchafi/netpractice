@@ -1,93 +1,132 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Networking Fundamentals</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 text-gray-800">
-  <!-- Header -->
-  <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-6 shadow-md">
-    <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">🌐 Networking Fundamentals</h1>
-      <nav class="space-x-6">
-        <a href="#ip" class="hover:underline">IP</a>
-        <a href="#tcp" class="hover:underline">TCP</a>
-        <a href="#tcpip" class="hover:underline">TCP/IP</a>
-        <a href="#osi" class="hover:underline">OSI Model</a>
-      </nav>
-    </div>
-  </header>
+<h1 align="center">🌐 NetPractice – Networking Fundamentals</h1>
+<p align="center">
+  <b>A beginner-friendly guide to IP, TCP, TCP/IP, and the OSI Model</b><br/>
+  🚀 Understand the core protocols that power the Internet
+</p>
 
-  <!-- Hero Section -->
-  <section class="text-center py-16 bg-white shadow-sm">
-    <h2 class="text-4xl font-extrabold text-blue-700">Master the Basics of Networking</h2>
-    <p class="mt-4 text-lg text-gray-600">IP, TCP, TCP/IP, OSI Model explained in simple terms with examples 🚀</p>
-  </section>
+---
 
-  <!-- IP Section -->
-  <section id="ip" class="max-w-5xl mx-auto px-6 py-12">
-    <h3 class="text-2xl font-bold text-indigo-700 mb-4">1. IP (Internet Protocol)</h3>
-    <p class="mb-4">IP defines how devices identify and locate each other on a network and how data packets are delivered.</p>
-    <ul class="list-disc pl-6 space-y-2">
-      <li><b>Main role:</b> Addressing and routing</li>
-      <li><b>Analogy:</b> Like your home address for the internet</li>
-      <li><b>Versions:</b> IPv4 (32-bit, ~4.3B addresses) and IPv6 (128-bit, ~340 undecillion addresses)</li>
-    </ul>
-    <div class="bg-gray-100 rounded-xl p-4 mt-4">
-      <p><b>IPv4 Example:</b> 192.168.1.10</p>
-      <p><b>IPv6 Example:</b> 2001:0db8::1</p>
-    </div>
-  </section>
+## 📍 1. IP (Internet Protocol)
+192.168.1.5:80
 
-  <!-- TCP Section -->
-  <section id="tcp" class="max-w-5xl mx-auto px-6 py-12 bg-gray-50">
-    <h3 class="text-2xl font-bold text-indigo-700 mb-4">2. TCP (Transmission Control Protocol)</h3>
-    <p class="mb-4">TCP ensures reliable communication between devices.</p>
-    <ul class="list-disc pl-6 space-y-2">
-      <li>Breaks data into packets</li>
-      <li>Numbers and checks packets for errors</li>
-      <li>Resends lost packets</li>
-      <li>Reassembles packets in correct order</li>
-    </ul>
-    <p class="mt-4"><b>Analogy:</b> Like a phone call where each message is acknowledged.</p>
-  </section>
+**What it is:**  
+The protocol that defines how devices **identify** and **locate** each other on a network, and how data packets are delivered.
 
-  <!-- TCP/IP Section -->
-  <section id="tcpip" class="max-w-5xl mx-auto px-6 py-12">
-    <h3 class="text-2xl font-bold text-indigo-700 mb-4">3. TCP/IP</h3>
-    <p class="mb-4">TCP/IP is the foundation of the Internet.</p>
-    <ul class="list-disc pl-6 space-y-2">
-      <li><b>IP:</b> Handles addressing and routing (where data goes)</li>
-      <li><b>TCP:</b> Ensures reliable delivery (how data arrives)</li>
-    </ul>
-    <div class="bg-gray-100 rounded-xl p-4 mt-4">
-      <p>📦 Data → split by TCP → wrapped with IP address → sent → received → rebuilt by TCP</p>
-    </div>
-  </section>
+- **Main role:** Addressing & Routing  
+- **Analogy:** Like a **street address** for your home – tells the postman where to deliver letters.  
 
-  <!-- OSI Model Section -->
-  <section id="osi" class="max-w-5xl mx-auto px-6 py-12 bg-gray-50">
-    <h3 class="text-2xl font-bold text-indigo-700 mb-4">4. OSI Model</h3>
-    <p class="mb-4">The OSI model standardizes how different systems communicate, using 7 layers.</p>
-    <ol class="list-decimal pl-6 space-y-1">
-      <li>Application – User interaction</li>
-      <li>Presentation – Data encryption & formatting</li>
-      <li>Session – Manage communication sessions</li>
-      <li>Transport – Reliable delivery (TCP/UDP)</li>
-      <li>Network – Addressing & routing (IP)</li>
-      <li>Data Link – Local delivery (MAC)</li>
-      <li>Physical – Wires, signals, connectors</li>
-    </ol>
-    <div class="bg-gray-100 rounded-xl p-4 mt-4">
-      <p><b>Analogy:</b> Like a blueprint for how data travels from one computer to another.</p>
-    </div>
-  </section>
+### 🌍 Versions of IP
+| Feature     | IPv4 (v4) | IPv6 (v6) |
+|-------------|-----------|-----------|
+| **Size**    | 32 bits (~4.3B addresses) | 128 bits (~340 undecillion addresses) |
+| **Format**  | `192.168.1.10` (dotted decimal) | `2001:0db8:85a3::8a2e:0370:7334` (hex with colons) |
+| **Problem** | Addresses running out | Virtually unlimited |
+| **Extras**  | — | Built-in **IPsec**, efficient routing, auto-configuration |
 
-  <!-- Footer -->
-  <footer class="bg-indigo-700 text-white text-center py-6 mt-12">
-    <p>⚡ Built for learning Networking · Hosted on GitHub Pages</p>
-  </footer>
-</body>
-</html>
+---
+
+## 📍 2. TCP (Transmission Control Protocol)
+
+**What it is:**  
+A protocol that ensures **reliable communication** between devices.
+
+- **Main role:** Guarantees that data is delivered **completely and in order**.  
+- **Analogy:** Like a **phone call** – you talk, the other person says *"Got it!"*.
+
+✅ TCP handles:  
+- 📦 Splitting data into packets  
+- 🔢 Numbering packets  
+- ✅ Error checking  
+- 🔄 Resending lost packets  
+- 🏗 Reassembling packets  
+
+---
+
+## 📍 3. TCP/IP (The Internet Foundation)
+
+**What it is:**  
+The combination of **TCP + IP** protocols = the foundation of the Internet.  
+
+- 🌍 **IP** → Decides *where* data goes  
+- 📞 **TCP** → Ensures *how* data arrives  
+
+➡️ **Data Flow:**
+Data → TCP (split/check) → IP (address/route) → Internet → TCP (rebuild) → App
+---
+
+## 📍 4. TCP/IP Addresses
+
+A **TCP/IP address** usually refers to an **IP address**, but real communication also requires a **port**.  
+
+Example:  
+- `192.168.1.5` → Device (IP)  
+- `:80` → Service (Web server port)  
+
+---
+
+## 🌐 Example: Visiting a Website
+
+1️⃣ **DNS Resolution**  
+- Your PC asks DNS: *"What is the IP of example.com?"*  
+- DNS replies: `93.184.216.34`
+
+2️⃣ **TCP Connection Setup (3-Way Handshake)**  
+PC → SYN → Server
+Server → SYN-ACK → PC
+PC → ACK → Server
+✅ Connection established  
+
+---
+
+## 📖 The OSI Model (7 Layers)
+
+**What it is:**  
+A **conceptual framework** for how systems communicate, created by ISO.  
+
+✨ **Why it matters:**  
+🧩 Standardization • 🏗 Modularity • 🔗 Interoperability • 🪜 Layer Independence  
+🔍 Easier Debugging • 📈 Scalability • 🎓 Education • 💡 Innovation  
+
+### 🔹 7 Layers (Top → Bottom)
+
+| # | Layer            | Role |
+|---|-----------------|------|
+| 07 | **Application**   | Closest to users – browsers, email, Zoom |
+| 06 | **Presentation**  | Encryption, compression, encoding |
+| 05 | **Session**       | Starts, manages, ends sessions |
+| 04 | **Transport**     | Ensures delivery (TCP/UDP) |
+| 03 | **Network**       | Addressing & routing (IP) |
+| 02 | **Data Link**     | Local delivery (MAC, Ethernet/Wi-Fi) |
+| 01 | **Physical**      | Signals, cables, connectors |
+
+---
+
+## 🖥 Application Layer Example (Google.com)
+
+1. Browser creates an **HTTP GET request** (Application)  
+2. TCP ensures **reliable delivery** (Transport)  
+3. IP decides **where to send** (Network)  
+4. Ethernet/Wi-Fi sends **signals** (Data Link & Physical)  
+
+---
+
+## ✅ Quick Recap
+
+- 🌍 **IP** = Addressing (Where)  
+- 📞 **TCP** = Reliable Transport (How)  
+- ⚡ **TCP/IP** = Core Internet protocols  
+- 🏠 **TCP/IP Address** = IP + Port  
+
+---
+
+## 📚 Resources
+
+- [RFC 791 – IP](https://www.rfc-editor.org/rfc/rfc791)  
+- [RFC 793 – TCP](https://www.rfc-editor.org/rfc/rfc793)  
+- [OSI Model – Wikipedia](https://en.wikipedia.org/wiki/OSI_model)  
+
+---
+
+<p align="center">
+  Made with ❤️ for learning and practicing <b>Networking Fundamentals</b>
+</p>
