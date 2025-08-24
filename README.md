@@ -7,8 +7,6 @@
 ---
 
 ## 📍 1. IP (Internet Protocol)
-192.168.1.5:80
-
 **What it is:**  
 The protocol that defines how devices **identify** and **locate** each other on a network, and how data packets are delivered.
 
@@ -23,6 +21,11 @@ The protocol that defines how devices **identify** and **locate** each other on 
 | **Problem** | Addresses running out | Virtually unlimited |
 | **Extras**  | — | Built-in **IPsec**, efficient routing, auto-configuration |
 
+#### 📍 Advantages over IPv4:
+  - Much larger address space.
+  - Built-in security features (IPsec).
+  - More efficient routing.
+  - Supports auto-configuration (devices can set their own IPs without DHCP).
 ---
 
 ## 📍 2. TCP (Transmission Control Protocol)
@@ -58,10 +61,23 @@ Data → TCP (split/check) → IP (address/route) → Internet → TCP (rebuild)
 
 A **TCP/IP address** usually refers to an **IP address**, but real communication also requires a **port**.  
 
-Example:  
-- `192.168.1.5` → Device (IP)  
-- `:80` → Service (Web server port)  
+*IP Address: The location (e.g., 192.168.1.5)*
+*Port Number (TCP/UDP): The specific service (e.g., port 80 for web, 22 for SSH)*
+Example:  `192.168.1.5:80`
+  - `192.168.1.5` → Device (IP)  
+  - `:80` → Service (Web server port)  
 
+## ✅ Summary:
+  - 🌍 **IP** = Address system (where /Addressing/).
+  - 📞 **TCP** = Reliable transport (how).
+  - ⚡ **TCP/IP** = Core Internet protocols \ that powers the Internet.
+  - 🏠 **TCP/IP Address** = [IP + Port] Usually just an IP address used with TCP.
+    ## ✅ Quick Recap
+
+-  = Addressing (Where)  
+- 📞 **TCP** = Reliable Transport (How)  
+- = Core Internet protocols  
+- 🏠 **TCP/IP Address** = IP + Port  
 ---
 
 ## 🌐 Example: Visiting a Website
@@ -82,10 +98,15 @@ PC → ACK → Server
 
 **What it is:**  
 A **conceptual framework** for how systems communicate, created by ISO.  
-
-✨ **Why it matters:**  
-🧩 Standardization • 🏗 Modularity • 🔗 Interoperability • 🪜 Layer Independence  
-🔍 Easier Debugging • 📈 Scalability • 🎓 Education • 💡 Innovation  
+    ✨ **Why it matters:**  
+    🧩 Standardization
+    🏗 Modularity 
+    🔗 Interoperability 
+    🪜 Layer Independence  
+    🔍 Easier Debugging 
+    📈 Scalability   
+    🎓 Education 
+    💡 Innovation  
 
 ### 🔹 7 Layers (Top → Bottom)
 
@@ -101,21 +122,81 @@ A **conceptual framework** for how systems communicate, created by ISO.
 
 ---
 
-## 🖥 Application Layer Example (Google.com)
-
-1. Browser creates an **HTTP GET request** (Application)  
-2. TCP ensures **reliable delivery** (Transport)  
-3. IP decides **where to send** (Network)  
-4. Ethernet/Wi-Fi sends **signals** (Data Link & Physical)  
+## 🖥 Application Layer in OSI Model:
+    - The Application layer enables applications to use the network.
+    - is the top layer in this model and takes care of network communication.
+    - The application layer provides the functionality to send and receive data from users.
+    - It gives applications (like browsers, email clients, Zoom, WhatsApp) a way to request network services without worrying about the lower details.
+  Passes Data to Lower Layers
+    \- The Application layer doesn’t send raw data directly over the internet.
+    \- Instead, it hands its data (like an HTTP request) to the Transport Layer (TCP/UDP).
+    \- Example flow when you open www.google.com in your browser:
+    \- Browser creates an HTTP GET request (Application Layer).
+    \- Passes it to TCP (Transport Layer) → ensures reliable delivery.
+    \- TCP hands it to IP (Network Layer) → decides where to send.
+    \- IP hands it to Ethernet/Wi-Fi (Data Link & Physical Layers) → sends the bits.
+  Example: 
+    1. Browser creates an **HTTP GET request** (Application)  
+    2. TCP ensures **reliable delivery** (Transport)  
+    3. IP decides **where to send** (Network)  
+    4. Ethernet/Wi-Fi sends **signals** (Data Link & Physical)  
 
 ---
 
-## ✅ Quick Recap
+🎭 Presentation Layer (OSI Layer 6)
+	The Presentation Layer is responsible for how data is presented, formatted, and sometimes encrypted, so that applications can understand it.
+	  It acts like a translator between the Application Layer (Layer 7) and the Transport Layer (Layer 4).
+  🛠 Main Responsibilities
+	-> Translation / Encoding
+		* Converts data into a format that the receiving application can understand.
+			Example: Convert EBCDIC (used by old IBM systems) into ASCII.(Extended Binary Coded Decimal Interchange Code).
+	-> Compression
+		* Reduces data size to save bandwidth and improve speed.
+			Example: JPEG, MP3, MPEG compression.
+	-> Encryption & Decryption
+		* Protects data for confidentiality.
+			Example: TLS/SSL encryption in HTTPS.
+		=> TLS/SSL Handshake
+		Client                                     Server
+		------                                     ------
+			|  SYN  ------------------------------   |
+			|       ----------------------> SYN_ACK  |
+			|  ACK  <-----------------------------   |      +-------------------------------------------------------------------------------+
+			| SYN → SYN-ACK → ACK (TCP C establish)  |		|	📦 Examples in Real Life											        |
+			|  ClientHello ----------------------->  |		|		File Formats: JPEG, PNG, MP3, MP4, PDF → standard presentation formats. |
+			|                                        |		|		Data Encoding: ASCII, UTF-8, EBCDIC.									|				
+			|  <----------------- Server Hello/i get |		|		Encryption: SSL/TLS (used in HTTPS).									|				
+			|  <------------------- Certificate      |		|		Compression: ZIP, GIF, MPEG.											|		
+			|  <----------------- Server_Hello_Done  |      +-------------------------------------------------------------------------------+
+			|                                        |
+			| Client_Key_Exchange ---------------->  |  ChangeCipherSpec ||<<
+			|  ChangeCipherSpec ------------------>  |  يتحول كلا الجانبين إلى الوضع المشفر.
+			|  Finished -------------------------->  |
+			|                                        |
+			|  <----------------- ChangeCipherSpec   |
+			|  <------------------- Finished         |
 
-- 🌍 **IP** = Addressing (Where)  
-- 📞 **TCP** = Reliable Transport (How)  
-- ⚡ **TCP/IP** = Core Internet protocols  
-- 🏠 **TCP/IP Address** = IP + Port  
+---
+
+🗨️ Session Layer (OSI Layer 5): "Analogy: Like a moderator keeping a conversation orderly"
+	- Without it → chaos: overlapping talk, no recovery from crashes, broken logins.
+	The Session Layer manages and controls the dialog (sessions) between two devices.
+	  It decides who talks, when they talk, and for how long.				+---------------------------------------------------+			
+	Example:																| 📦 Real-Life Examples		                  		|
+		Think of it as the “conversation manager” of a network connection   |    -> NetBIOS (Network Basic Input/Output System) |
+	🛠 Main Responsibilities   		 										|    -> RPC (Remote Procedure Call)	             	|
+	  -> Establishing Sessions:												|    -> SQL Sessions when connected to a database   |	
+		 * Starts the communication between two devices.					|    -> API sessions with authentication tokens	    |		
+		    Example: Logging into a remote server with SSH.					|    -> SSH or RDP sessions for remote access       |				
+	  -> Maintaining Sessions:												+---------------------------------------------------+
+		 * Keeps track of ongoing communication.										
+		    Example: A video call staying active while you talk.									
+	  -> Synchronizing:																			
+		 * Adds checkpoints in long transmissions, so if a crash happens, you don’t restart from scratch.
+		    Example: Downloading a 2 GB file → if interrupted, resume from 1.5 GB instead of starting over.
+	  -> Terminating Sessions:
+		 * Gracefully ends communication when one side finishes.
+		    Example: Clicking “Log Out” ends the session.
 
 ---
 
