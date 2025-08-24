@@ -1,191 +1,93 @@
-1. IP (Internet Protocol)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Networking Fundamentals</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-6 shadow-md">
+    <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">🌐 Networking Fundamentals</h1>
+      <nav class="space-x-6">
+        <a href="#ip" class="hover:underline">IP</a>
+        <a href="#tcp" class="hover:underline">TCP</a>
+        <a href="#tcpip" class="hover:underline">TCP/IP</a>
+        <a href="#osi" class="hover:underline">OSI Model</a>
+      </nav>
+    </div>
+  </header>
 
-What it is:
-IP is a protocol that defines how devices identify and locate each other on a network and how data packets are delivered.
+  <!-- Hero Section -->
+  <section class="text-center py-16 bg-white shadow-sm">
+    <h2 class="text-4xl font-extrabold text-blue-700">Master the Basics of Networking</h2>
+    <p class="mt-4 text-lg text-gray-600">IP, TCP, TCP/IP, OSI Model explained in simple terms with examples 🚀</p>
+  </section>
 
-Main role: Addressing and routing.
+  <!-- IP Section -->
+  <section id="ip" class="max-w-5xl mx-auto px-6 py-12">
+    <h3 class="text-2xl font-bold text-indigo-700 mb-4">1. IP (Internet Protocol)</h3>
+    <p class="mb-4">IP defines how devices identify and locate each other on a network and how data packets are delivered.</p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><b>Main role:</b> Addressing and routing</li>
+      <li><b>Analogy:</b> Like your home address for the internet</li>
+      <li><b>Versions:</b> IPv4 (32-bit, ~4.3B addresses) and IPv6 (128-bit, ~340 undecillion addresses)</li>
+    </ul>
+    <div class="bg-gray-100 rounded-xl p-4 mt-4">
+      <p><b>IPv4 Example:</b> 192.168.1.10</p>
+      <p><b>IPv6 Example:</b> 2001:0db8::1</p>
+    </div>
+  </section>
 
-Analogy: Think of it like the street address of your house – it tells the postman where to deliver letters.
+  <!-- TCP Section -->
+  <section id="tcp" class="max-w-5xl mx-auto px-6 py-12 bg-gray-50">
+    <h3 class="text-2xl font-bold text-indigo-700 mb-4">2. TCP (Transmission Control Protocol)</h3>
+    <p class="mb-4">TCP ensures reliable communication between devices.</p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>Breaks data into packets</li>
+      <li>Numbers and checks packets for errors</li>
+      <li>Resends lost packets</li>
+      <li>Reassembles packets in correct order</li>
+    </ul>
+    <p class="mt-4"><b>Analogy:</b> Like a phone call where each message is acknowledged.</p>
+  </section>
 
-There are two main versions:
+  <!-- TCP/IP Section -->
+  <section id="tcpip" class="max-w-5xl mx-auto px-6 py-12">
+    <h3 class="text-2xl font-bold text-indigo-700 mb-4">3. TCP/IP</h3>
+    <p class="mb-4">TCP/IP is the foundation of the Internet.</p>
+    <ul class="list-disc pl-6 space-y-2">
+      <li><b>IP:</b> Handles addressing and routing (where data goes)</li>
+      <li><b>TCP:</b> Ensures reliable delivery (how data arrives)</li>
+    </ul>
+    <div class="bg-gray-100 rounded-xl p-4 mt-4">
+      <p>📦 Data → split by TCP → wrapped with IP address → sent → received → rebuilt by TCP</p>
+    </div>
+  </section>
 
-IPv4: 32-bit addresses (e.g., 192.168.1.10)
+  <!-- OSI Model Section -->
+  <section id="osi" class="max-w-5xl mx-auto px-6 py-12 bg-gray-50">
+    <h3 class="text-2xl font-bold text-indigo-700 mb-4">4. OSI Model</h3>
+    <p class="mb-4">The OSI model standardizes how different systems communicate, using 7 layers.</p>
+    <ol class="list-decimal pl-6 space-y-1">
+      <li>Application – User interaction</li>
+      <li>Presentation – Data encryption & formatting</li>
+      <li>Session – Manage communication sessions</li>
+      <li>Transport – Reliable delivery (TCP/UDP)</li>
+      <li>Network – Addressing & routing (IP)</li>
+      <li>Data Link – Local delivery (MAC)</li>
+      <li>Physical – Wires, signals, connectors</li>
+    </ol>
+    <div class="bg-gray-100 rounded-xl p-4 mt-4">
+      <p><b>Analogy:</b> Like a blueprint for how data travels from one computer to another.</p>
+    </div>
+  </section>
 
-IPv6: 128-bit addresses (e.g., 2001:0db8::1)
-+++++++++++++++++++++++++++++++
-IPv4: 32-bit (≈4 billion addresses)
-
-IPv6: 128-bit (≈340 undecillion addresses)
-++++++++++++++++++++++++
-
-IPv4 (Internet Protocol version 4)
-
-Size: 32 bits → about 4.3 billion unique addresses.
-
-Format: Four decimal numbers separated by dots (dotted-decimal notation).
-Example: 192.168.1.10
-
-Problem: Because of the internet’s growth, IPv4 addresses are running out.
-
-IPv6 (Internet Protocol version 6)
-
-Size: 128 bits → about 340 undecillion unique addresses (enough for every device on Earth many times over).
-
-Format: Eight groups of hexadecimal numbers separated by colons.
-Example: 2001:0db8:85a3:0000:0000:8a2e:0370:7334 (can be shortened).
-
-Advantages over IPv4:
-
-Much larger address space.
-
-Built-in security features (IPsec).
-
-More efficient routing.
-
-Supports auto-configuration (devices can set their own IPs without DHCP).
-+++++++++++++++++
-2. TCP (Transmission Control Protocol)
-
-What it is:
-TCP is a protocol that ensures reliable communication between devices.
-
-Main role: Makes sure data is delivered completely and in order.
-
-Analogy: Like a phone call – you talk, the other person replies “I heard you,” ensuring nothing is missed.
-
-TCP handles:
-
-Breaking data into packets
-
-Numbering packets
-
-Checking for errors
-
-Resending lost packets
-
-Reassembling packets in the right order
-++++++++++++++++++++++++++
-3. TCP/IP
-
-What it is:
-TCP/IP is the combination of TCP and IP protocols – the foundation of the Internet.
-
-How it works together:
-
-IP handles addressing and routing (where the data goes).
-
-TCP ensures reliability and correct delivery (how the data arrives).
-
-So:
-📦 Data → split by TCP → wrapped with IP address → sent → received → checked and rebuilt by TCP.
-+++++++++++++++++++++++
-3. TCP/IP
-
-What it is:
-TCP/IP is the combination of TCP and IP protocols – the foundation of the Internet.
-
-How it works together:
-
-IP handles addressing and routing (where the data goes).
-
-TCP ensures reliability and correct delivery (how the data arrives).
-
-So:
-📦 Data → split by TCP → wrapped with IP address → sent → received → checked and rebuilt by TCP.
-+++++++++++++
-4. TCP/IP Addresses
-
-Technically, "TCP/IP address" usually refers to an IP address (the identifier of a device on a network).
-
-For actual communication, you need:
-
-IP Address: The location (e.g., 192.168.1.5)
-
-Port Number (TCP/UDP): The specific service (e.g., port 80 for web, 22 for SSH)
-
-Example: 
-  192.168.1.5:80
-    192.168.1.5 → IP address (the computer)
-    :80 → TCP port (the web server on that computer)
-+++++++++++++++++++
-
-✅ Summary:
-    IP = Address system (where).
-    TCP = Reliable transport (how).
-    TCP/IP = The combo that powers the Internet.
-    TCP/IP address = Usually just an IP address used with TCP.
-+++++++++++++++++
-
-you have this:
-http://example.com
-
-🔹 Essential Steps
----
-1. DNS Resolution (Find the IP address)
-Your computer doesn’t know where example.com is.
-It asks a DNS server: “What is the IP address of example.com?”
-DNS replies:
-Example: 93.184.216.34 (IPv4)
-Now you have the destination IP address.
----
-2. TCP Connection Setup
-Your browser needs a reliable connection to the server.
-It uses TCP (Transmission Control Protocol) with the IP address.
-The 3-Way Handshake happens:
-Your PC → SYN → Server
-Server → SYN-ACK → Your PC
-Your PC → ACK → Server
-✅ Connection established.
----
-
-🔹 What is the OSI Model?
-    - OSI = Open Systems Interconnection
-    - It’s a conceptual model created by ISO (International Organization for Standardization).
-    - Purpose: To standardize how different systems communicate over a network.
-    - It splits communication into 7 layers, each with a specific role.
-power of the OSI model:
-   -> Standardization   -> التوحيد القياسي
-   -> Modularity   -> الوحدات النمطية
-   -> Interoperability   -> التشغيل البيني
-   -> Layer Independence   -> استقلالية الطبقات
-   -> Simplified Troubleshooting   -> تبسيط استكشاف الأخطاء وإصلاحها
-   -> Flexibility and Scalability   -> المرونة وقابلية التوسع
-   -> Educational Value   -> القيمة التعليمية
-   -> Encourages Innovation   -> تشجيع الابتكار
-Think of it like a blueprint for how data moves from one computer to another.
-
-🔹 The 7 Layers of the OSI Model (Top → Bottom)
-    07 Application  •────── The closest layer to the user; provides application services.
-    06 Presentation •────── Encrypts, encodes and compresses usable data.
-    05 Session      •────── Establishes, manages, and terminates sessions between end nodes.
-    04 Transport    •────── Transmits data using transmission protocols including TCP & UDP.
-    03 Network      •────── Assigns global addresses to interfaces and determines the best routes through different networks.
-    02 Data link    •────── Assigns local addresses to interfaces, delivers information locally, MAC method.
-    01 Physical     •────── Encodes signals, cabling and connectors, physical specifications.
-
-Application Layer in OSI Model:
-    - The Application layer enables applications to use the network.
-    - is the top layer in this model and takes care of network communication.
-    - The application layer provides the functionality to send and receive data from users.
-    - It gives applications (like browsers, email clients, Zoom, WhatsApp) a way to request network services without worrying about the lower details.
-  Passes Data to Lower Layers
-    \- The Application layer doesn’t send raw data directly over the internet.
-    \- Instead, it hands its data (like an HTTP request) to the Transport Layer (TCP/UDP).
-    \- Example flow when you open www.google.com in your browser:
-    \- Browser creates an HTTP GET request (Application Layer).
-    \- Passes it to TCP (Transport Layer) → ensures reliable delivery.
-    \- TCP hands it to IP (Network Layer) → decides where to send.
-    \- IP hands it to Ethernet/Wi-Fi (Data Link & Physical Layers) → sends the bits.
-
-
-
-
-
-Layer in OSI Model(open system interconnection):
-Internet’s architectural model is organized in a stack of protocols composed of 5 distinct layers:
-application layer:
-    is the top layer in this model and takes care of network communication. The application layer provides the functionality to send and receive data from users.
-The transport layer:
-The transport layer is responsible for reliable, end-to-end communication between applications running on different hosts. It provides services like segmentation, connection management, error control, and flow control to ensure data is delivered accurately and efficiently.
-Network Layer:
-Internet’s network layer is responsible for routing packets, which are called “datagrams” in this layer, from one host to another, the sender’s transport-layer protocol gives a segment as well as a destination address to the network layer. The network layer must then deliver this segment to the receiving host’s transport layer.
+  <!-- Footer -->
+  <footer class="bg-indigo-700 text-white text-center py-6 mt-12">
+    <p>⚡ Built for learning Networking · Hosted on GitHub Pages</p>
+  </footer>
+</body>
+</html>
