@@ -63,13 +63,30 @@ A **TCP/IP address** usually refers to an **IP address**, but real communication
 
 *IP Address: The location (e.g., 192.168.1.5)*
 *Port Number (TCP/UDP): The specific service (e.g., port 80 for web, 22 for SSH)*
-Example:  `192.168.1.5:80`
-  - `192.168.1.5` → Device (IP)  
-  - `:80` → Service (Web server port)
-	*Web server ports are logical endpoints for network connections, facilitating data exchange between web servers and clients.*
 
-*> Establishing Connections:*
-	The standard protocols for transmitting web content are HTTP (Hypertext Transfer Protocol) and HTTPS (Hypertext Transfer Protocol Secure).
+## 🌐 IP + Port Example
+Example: `192.168.1.5:80`
+   - `192.168.1.5` → Device **IP Address**  
+   - `:80` → **Service Port** (Web server)
+
+🔹 **What are Ports?**  
+Ports are **logical endpoints** that allow multiple services to run on the same device.  
+They make sure your computer knows **which application** should handle the incoming data.  
+
+---
+
+### 📦 Common Web Server Ports
+- **Port 80** → HTTP (insecure web traffic)  
+- **Port 443** → HTTPS (secure web traffic with TLS/SSL)  
+
+---
+
+### 🔹 Establishing Connections
+When your browser connects to a website:
+1. It looks up the server’s **IP address** (via DNS).  
+2. It connects to the server on a specific **port**.  
+   - Port **80** → Uses **HTTP** (Hypertext Transfer Protocol).  
+   - Port **443** → Uses **HTTPS** (HTTP Secure, encrypted with TLS/SSL).  
 
 ## ✅ Summary:
   - 🌍 **IP** = Address system (where /Addressing/).
