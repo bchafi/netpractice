@@ -69,14 +69,42 @@ Example: `192.168.1.5:80`
    - `192.168.1.5` → Device **IP Address**  
    - `:80` → **Service Port** (Web server)
 
-🔹 **What are Ports? (ranging from 0 to 65535)**
-Ports are **logical endpoints** that allow multiple services to run on the same device.  
-They make sure your computer knows **which application** should handle the incoming data.  
-Example:
-	Web servers use port 80 for HTTP and port 443 for HTTPS.
-	Email servers use port 25 for SMTP.
-	So, ports make it possible for your computer to run multiple networked services at the same time, and ensure that the right program receives the right data.
+## 🎯 Understanding Ports (0 – 65535)
+
+🔹 **What are Ports?**  
+Ports are **logical endpoints** that allow multiple services to run on the **same device**.  
+They make sure your computer knows **which application** should handle incoming data.  
+
+📦 **Example:**  
+- 🌐 Web servers → **Port 80 (HTTP)** & **Port 443 (HTTPS)**  
+- 📧 Email servers → **Port 25 (SMTP)**  
+- 🎮 Games & apps → use different custom ports  
+
+➡️ Thanks to ports, your computer can run **multiple networked services simultaneously**, and still deliver the right data to the right program.  
+
 ---
+
+### 🔹 Port Ranges
+
+| Range              | Type             | Use Case |
+|--------------------|-----------------|----------|
+| **0 – 1023**       | **Well-Known Ports** | Reserved for core services (HTTP, HTTPS, FTP, SSH) |
+| **1024 – 49151**   | **Registered Ports** | Used by user applications & processes |
+| **49152 – 65535**  | **Dynamic / Private Ports** | Temporary (ephemeral) ports chosen automatically |
+
+---
+
+### 📖 Quick Example
+When you visit `https://example.com`:  
+1. Your browser connects to the server’s **IP address**.  
+2. It specifically requests data from **Port 443** (HTTPS).  
+3. The server listens on Port 443 → responds with the website content.  
+
+✅ Client (Your PC) → 93.184.216.34:443 (Server HTTPS Port)
+ 	-> Without ports, all data would arrive in one place with no way to separate web traffic, email, games, etc.
+
+---
+
 
 ### 📦 Common Web Server Ports
 - **Port 80** →  (insecure web traffic)
