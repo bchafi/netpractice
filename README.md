@@ -105,7 +105,6 @@ When you visit `https://example.com`:
 
 ---
 
-
 ### 📦 Common Web Server Ports
 - **Port 80** →  (insecure web traffic)
 - **Port 443** → (secure web traffic with TLS/SSL)
@@ -124,12 +123,7 @@ When your browser connects to a website:
   - 📞 **TCP** = Reliable transport (how).
   - ⚡ **TCP/IP** = Core Internet protocols \ that powers the Internet.
   - 🏠 **TCP/IP Address** = [IP + Port] Usually just an IP address used with TCP.
-    ## ✅ Quick Recap
-
--  = Addressing (Where)  
-- 📞 **TCP** = Reliable Transport (How)  
-- = Core Internet protocols  
-- 🏠 **TCP/IP Address** = IP + Port  
+  
 ---
 
 ## 🌐 Example: Visiting a Website
