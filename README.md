@@ -70,8 +70,8 @@ Example: `192.168.1.5:80`
    - `:80` → **Service Port** (Web server)
 
 🔹 **What are Ports? (ranging from 0 to 65535)**
-	- Ports are **logical endpoints** that allow multiple services to run on the same device.  
-	- They make sure your computer knows **which application** should handle the incoming data.  
+	Ports are **logical endpoints** that allow multiple services to run on the same device.  
+	They make sure your computer knows **which application** should handle the incoming data.  
  *Example:*
    \- Web servers use port 80 for HTTP and port 443 for HTTPS.*
    \- Email servers use port 25 for SMTP.
