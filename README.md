@@ -123,10 +123,10 @@ A **conceptual framework** for how systems communicate, created by ISO.
 ---
 
 ## 🖥 Application Layer in OSI Model:
-    - The Application layer enables applications to use the network.
-    - is the top layer in this model and takes care of network communication.
-    - The application layer provides the functionality to send and receive data from users.
-    - It gives applications (like browsers, email clients, Zoom, WhatsApp) a way to request network services without worrying about the lower details.
+	\- The Application layer enables applications to use the network.
+    \- is the top layer in this model and takes care of network communication.
+    \- The application layer provides the functionality to send and receive data from users.
+    \- It gives applications (like browsers, email clients, Zoom, WhatsApp) a way to request network services without worrying about the lower details.
   Passes Data to Lower Layers
     \- The Application layer doesn’t send raw data directly over the internet.
     \- Instead, it hands its data (like an HTTP request) to the Transport Layer (TCP/UDP).
