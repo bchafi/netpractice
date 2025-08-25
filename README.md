@@ -65,7 +65,11 @@ A **TCP/IP address** usually refers to an **IP address**, but real communication
 *Port Number (TCP/UDP): The specific service (e.g., port 80 for web, 22 for SSH)*
 Example:  `192.168.1.5:80`
   - `192.168.1.5` → Device (IP)  
-  - `:80` → Service (Web server port)  
+  - `:80` → Service (Web server port)
+	*Web server ports are logical endpoints for network connections, facilitating data exchange between web servers and clients.*
+
+*> Establishing Connections:*
+	The standard protocols for transmitting web content are HTTP (Hypertext Transfer Protocol) and HTTPS (Hypertext Transfer Protocol Secure).
 
 ## ✅ Summary:
   - 🌍 **IP** = Address system (where /Addressing/).
