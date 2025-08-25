@@ -69,15 +69,18 @@ Example: `192.168.1.5:80`
    - `192.168.1.5` → Device **IP Address**  
    - `:80` → **Service Port** (Web server)
 
-🔹 **What are Ports?**  
-Ports are **logical endpoints** that allow multiple services to run on the same device.  
-They make sure your computer knows **which application** should handle the incoming data.  
-
+🔹 **What are Ports? (ranging from 0 to 65535)**
+	- Ports are **logical endpoints** that allow multiple services to run on the same device.  
+	- They make sure your computer knows **which application** should handle the incoming data.  
+ *Example:*
+   \- Web servers use port 80 for HTTP and port 443 for HTTPS.*
+   \- Email servers use port 25 for SMTP.
+   \- So, ports make it possible for your computer to run multiple networked services at the same time, and ensure that the right program receives the right data.
 ---
 
 ### 📦 Common Web Server Ports
-- **Port 80** → HTTP (insecure web traffic)  
-- **Port 443** → HTTPS (secure web traffic with TLS/SSL)  
+- **Port 80** →  (insecure web traffic)
+- **Port 443** → (secure web traffic with TLS/SSL)
 
 ---
 
@@ -85,8 +88,8 @@ They make sure your computer knows **which application** should handle the incom
 When your browser connects to a website:
 1. It looks up the server’s **IP address** (via DNS).  
 2. It connects to the server on a specific **port**.  
-   - Port **80** → Uses **HTTP** (Hypertext Transfer Protocol).  
-   - Port **443** → Uses **HTTPS** (HTTP Secure, encrypted with TLS/SSL).  
+   - Port **80** → Uses **HTTP** (Hypertext Transfer Protocol). HTTP (insecure web traffic)
+   - Port **443** → Uses **HTTPS** (HTTP Secure, encrypted with TLS/SSL). HTTPS (secure web traffic with TLS/SSL)
 
 ## ✅ Summary:
   - 🌍 **IP** = Address system (where /Addressing/).
