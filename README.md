@@ -53,7 +53,7 @@ The combination of **TCP + IP** protocols = the foundation of the Internet.
 - 🌍 **IP** → Decides *where* data goes  
 - 📞 **TCP** → Ensures *how* data arrives  
 
-➡️ *Data Flow:*
+ > Data Flow:
 	\- Data → TCP (split/check) → IP (address/route) → Internet → TCP (rebuild) → App
 ---
 
