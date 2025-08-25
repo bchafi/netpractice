@@ -72,10 +72,10 @@ Example: `192.168.1.5:80`
 🔹 **What are Ports? (ranging from 0 to 65535)**
 Ports are **logical endpoints** that allow multiple services to run on the same device.  
 They make sure your computer knows **which application** should handle the incoming data.  
-*Example:*
-   \- Web servers use port 80 for HTTP and port 443 for HTTPS.*
-   \- Email servers use port 25 for SMTP.
-   \- So, ports make it possible for your computer to run multiple networked services at the same time, and ensure that the right program receives the right data.
+Example:
+	Web servers use port 80 for HTTP and port 443 for HTTPS.
+	Email servers use port 25 for SMTP.
+	So, ports make it possible for your computer to run multiple networked services at the same time, and ensure that the right program receives the right data.
 ---
 
 ### 📦 Common Web Server Ports
