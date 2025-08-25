@@ -21,7 +21,7 @@ The protocol that defines how devices **identify** and **locate** each other on 
 | **Problem** | Addresses running out | Virtually unlimited |
 | **Extras**  | — | Built-in **IPsec**, efficient routing, auto-configuration |
 
-#### 📍 Advantages over IPv4:
+#### 📍 Advantages over IPv6:
   - Much larger address space.
   - Built-in security features (IPsec).
   - More efficient routing.
@@ -54,7 +54,7 @@ The combination of **TCP + IP** protocols = the foundation of the Internet.
 - 📞 **TCP** → Ensures *how* data arrives  
 
 ➡️ **Data Flow:**
-Data → TCP (split/check) → IP (address/route) → Internet → TCP (rebuild) → App
+ 	\- Data → TCP (split/check) → IP (address/route) → Internet → TCP (rebuild) → App
 ---
 
 ## 📍 4. TCP/IP Addresses
