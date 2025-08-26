@@ -60,12 +60,11 @@ The combination of **TCP + IP** protocols = the foundation of the Internet.
 ## 📍 4. TCP/IP Addresses
 
 A **TCP/IP address** usually refers to an **IP address**, but real communication also requires a **port**.  
+   *IP Address: The location (e.g., 192.168.1.5)*
+   *Port Number (TCP/UDP): The specific service (e.g., port 80 for web, 22 for SSH)*
 
-*IP Address: The location (e.g., 192.168.1.5)*
-*Port Number (TCP/UDP): The specific service (e.g., port 80 for web, 22 for SSH)*
-
-## 🌐 IP + Port Example
-Example: `192.168.1.5:80`
+ 🌐 IP + Port Example
+   Example: `192.168.1.5:80`
    - `192.168.1.5` → Device **IP Address**  
    - `:80` → **Service Port** (Web server)
 
@@ -140,19 +139,18 @@ PC → ACK → Server
 
 ---
 
-## 📖 The OSI Model (7 Layers)
+## 📖 The OSI Model (7 Layers):
 
-**What it is:**  
-A **conceptual framework** for how systems communicate, created by ISO.  
+A **conceptual framework** for how systems communicate, created by ISO(International Organization for Standardization).  
     ✨ **Why it matters:**  
-    🧩 Standardization
-    🏗 Modularity 
-    🔗 Interoperability 
-    🪜 Layer Independence  
-    🔍 Easier Debugging 
-    📈 Scalability   
-    🎓 Education 
-    💡 Innovation  
+       \- 🧩 Standardization
+       \- 🏗 Modularity 
+       \- 🔗 Interoperability 
+       \- 🪜 Layer Independence  
+       \- 🔍 Easier Debugging 
+       \- 📈 Scalability   
+       \- 🎓 Education 
+       \- 💡 Innovation  
 
 ### 🔹 7 Layers (Top → Bottom)
 
@@ -170,14 +168,29 @@ A **conceptual framework** for how systems communicate, created by ISO.
 
 ## 7️⃣ Application Layer
 
-📍 **What it is:**  
-The **Application Layer** enables software applications to **use the network**.  
-It provides the functionality to **send and receive data** without worrying about the lower-level details.  
-
-- 🏆 **Top layer** in the OSI model.  
-- 👨‍💻 Provides services for browsers, email clients, WhatsApp, Zoom, etc.  
-- 📤 Passes requests down to the lower layers (doesn’t send raw data itself).  
-
+🟢 What the Application Layer Does
+   - It provides the rules and services that applications use to communicate over the network.
+   - Without it, your apps would have no standard way of “talking” to other computers.
+✅ Example:
+   - When you open a browser and type google.com:
+   - Chrome itself is the application.  
+   - But Chrome uses HTTP/HTTPS protocols (Application Layer) to ask Google’s servers for a webpage.
+So, the Application Layer makes sure the browser and Google’s server understand each other.
+*FOR WHAT:* 
+   It exists so different apps on different systems can talk to each other
+✅ Example:
+   - 🌍 Browsing → HTTP/HTTPS
+   - 📧 Email → SMTP, IMAP, POP3
+   - 🔍 Name resolution → DNS
+   - 📂 File sharing → FTP, SMB
+🟢 How It Works
+   - You (the user) make a request.
+   - The application (browser, mail client, etc.) passes your request to the Application Layer.
+   **The Application Layer:**    
+   - Chooses the right protocol (HTTP, SMTP, DNS, etc.)
+   - Structures the data so the other computer understands it.
+   - It then sends the data down to the Presentation Layer → Transport Layer → Network → and out onto the internet.
+   - On the other side, the receiver’s Application Layer interprets the request and delivers it to their app.
 ### 🔹 How Data Flows
 1. Browser creates an **HTTP GET request** (**Application Layer**)  
 2. TCP ensures **reliable delivery** (**Transport Layer**)  
