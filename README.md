@@ -178,8 +178,7 @@ A **conceptual framework** for how systems communicate, created by ISO(Internati
    - But Chrome uses HTTP/HTTPS protocols (Application Layer) to ask Google’s servers for a webpage.
 So, the Application Layer makes sure the browser and Google’s server understand each other.
 
-*FOR WHAT:* 
-   It exists so different apps on different systems can talk to each other
+**FOR WHAT: It exists so different apps on different systems can talk to each other**
 
 ✅ Example:
    - 🌍 Browsing → HTTP/HTTPS
