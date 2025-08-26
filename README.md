@@ -166,9 +166,15 @@ A **conceptual framework** for how systems communicate, created by ISO(Internati
 
 ---
 
-## 7️⃣ Application Layer
+## 7️⃣ Application Layer (OSI Layer 7)
 
-🟢 What the Application Layer Does
+🔹 **What it is:**  
+The Application Layer provides network services directly to end users.
+It’s where applications like web browsers, email clients, and messaging apps interact with the network.  
+
+---
+
+### What the Application Layer Does
    - It provides the rules and services that applications use to communicate over the network.
    - Without it, your apps would have no standard way of “talking” to other computers.
 
@@ -186,7 +192,7 @@ So, the Application Layer makes sure the browser and Google’s server understan
    - 🔍 Name resolution → DNS
    - 📂 File sharing → FTP, SMB 
 
-🟢 How It Works
+### How It Works
    - Browser creates an **HTTP GET request** (**Application Layer**)
    - The application (browser, mail client, etc.) passes your request to the Application Layer.
    **The Application Layer:**    
@@ -198,54 +204,57 @@ So, the Application Layer makes sure the browser and Google’s server understan
 
 ---
 
-## 6️⃣ 🎭 Presentation Layer
+## 🎭 Presentation Layer (OSI Layer 6)
 
-📍 **What it is:**  
-The **Presentation Layer** makes sure data is in a **usable format** and applies **encryption, compression, or translation** if needed.  
-It acts as a **translator** between the Application (Layer 7) and Transport (Layer 4).  
-
-### 🛠 Main Responsibilities
-- 🔤 **Translation / Encoding**  
-   - Converts data formats between sender and receiver.  
-   - Example: EBCDIC → ASCII, UTF-8 encoding.  
-
-- 📦 **Compression**  
-   - Reduces file size for faster transfer.  
-   - Example: JPEG (images), MP3 (audio), MPEG (video).  
-
-- 🔒 **Encryption & Decryption**  
-   - Protects data confidentiality.  
-   - Example: **TLS/SSL** in HTTPS.  
+🔹 **What it is:**  
+The Presentation Layer acts as the **translator** of the OSI model.  
+It ensures that the data sent by the Application Layer of one system can be **read, formatted, compressed, or encrypted** so the receiving system can understand it.  
 
 ---
 
-### 🔹 TLS/SSL Handshake (Simplified)
-```C
-	Client                                    Server
-	------                                    ------
-	   |  SYN  ------------------------------   |
-	   |       ----------------------> SYN_ACK  |
-	   |  ACK  <-----------------------------   |	+-------------------------------------------------------------------------------+
-	   | SYN → SYN-ACK → ACK (TCP C establish)  |	|	📦 Examples in Real Life											        |
-	   |  ClientHello ----------------------->  |	|		File Formats: JPEG, PNG, MP3, MP4, PDF → standard presentation formats. |
-	   |                                        |	|		Data Encoding: ASCII, UTF-8, EBCDIC.									|				
-	   |  <----------------- Server Hello/i get |	|		Encryption: SSL/TLS (used in HTTPS).									|				
-	   |  <------------------- Certificate      |	|		Compression: ZIP, GIF, MPEG.											|		
-	   |  <----------------- Server_Hello_Done  |	+-------------------------------------------------------------------------------+
-	   |                                        |
-	   | Client_Key_Exchange ---------------->  |  ChangeCipherSpec ||<<
-	   |  ChangeCipherSpec ------------------>  |  يتحول كلا الجانبين إلى الوضع المشفر.
-	   |  Finished -------------------------->  |
-	   |                                        |
-	   |  <----------------- ChangeCipherSpec   |
-	   |  <------------------- Finished         |
-```
+### 🛠 Main Responsibilities
+- 🔡 **Translation / Encoding** → Converts data formats so both sides understand (e.g., ASCII ↔ UTF-8).  
+- 📦 **Compression** → Reduces data size to save bandwidth (e.g.ZIP, GIF, JPEG, MP3, MPEG) **File Formats:**. 
+- 🔒 **Encryption / Decryption** → Secures data before transmission (e.g., SSL/TLS for HTTPS).  
+ 🔹 TLS/SSL Handshake (Simplified)
+   ```C
+      Client                                    Server
+      ------                                    ------
+         |  SYN  ------------------------------   |
+         |       ----------------------> SYN_ACK  |
+         |  ACK  <-----------------------------   |	+-------------------------------------------------------------------------------+
+         | SYN → SYN-ACK → ACK (TCP C establish)  |	|	📦 Examples in Real Life	                                                  |
+         |  ClientHello ----------------------->  |	|		File Formats: JPEG, PNG, MP3, MP4, PDF → standard presentation formats.   |
+         |                                        |	|		Data Encoding: ASCII, UTF-8, EBCDIC.								              |				
+         |  <----------------- Server Hello/i get |	|		Encryption: SSL/TLS (used in HTTPS).									           |				
+         |  <------------------- Certificate      |	|		Compression: ZIP, GIF, MPEG.									               	  |		
+         |  <----------------- Server_Hello_Done  |	+-------------------------------------------------------------------------------+
+         |                                        |
+         | Client_Key_Exchange ---------------->  |  ChangeCipherSpec ||<<
+         |  ChangeCipherSpec ------------------>  |  يتحول كلا الجانبين إلى الوضع المشفر.
+         |  Finished -------------------------->  |
+         |                                        |
+         |  <----------------- ChangeCipherSpec   |
+         |  <------------------- Finished         |
+   ```
 
-### 📦 Examples in Real Life
-- File Formats → JPEG, PNG, MP3, MP4, PDF  
-- Data Encoding → ASCII, UTF-8, EBCDIC  
-- Encryption → SSL/TLS in HTTPS  
-- Compression → ZIP, GIF, MPEG  
+---
+
+### 📚 Example Flow (HTTPS Request)
+1. Browser creates an **HTTP request** (Application Layer).  
+2. **Presentation Layer**:  
+   - 🔒 Encrypts with TLS/SSL  
+   - 🔡 Encodes text in : ASCII, UTF-8, EBCDIC   
+   - 📦 Compresses data if needed → ZIP, GIF, MPEG
+3. Transport Layer (TCP) ensures delivery.  
+4. Network Layer (IP) routes the packets.  
+
+---
+
+### ✅ Key Takeaways
+- 📌 **Goal:** Make data **readable, secure, and efficient**.  
+- ⚡ Services provided: **Translation, Compression, Encryption**.  
+- 🧑‍💻 Users don’t see it directly, but it works behind the scenes every time you browse securely, stream, or share files.  
 
 ---
 
