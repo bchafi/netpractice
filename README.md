@@ -171,18 +171,22 @@ A **conceptual framework** for how systems communicate, created by ISO(Internati
 🟢 What the Application Layer Does
    - It provides the rules and services that applications use to communicate over the network.
    - Without it, your apps would have no standard way of “talking” to other computers.
+
 ✅ Example:
    - When you open a browser and type google.com:
    - Chrome itself is the application.  
    - But Chrome uses HTTP/HTTPS protocols (Application Layer) to ask Google’s servers for a webpage.
 So, the Application Layer makes sure the browser and Google’s server understand each other.
+
 *FOR WHAT:* 
    It exists so different apps on different systems can talk to each other
+
 ✅ Example:
    - 🌍 Browsing → HTTP/HTTPS
    - 📧 Email → SMTP, IMAP, POP3
    - 🔍 Name resolution → DNS
-   - 📂 File sharing → FTP, SMB  
+   - 📂 File sharing → FTP, SMB 
+
 🟢 How It Works
    - Browser creates an **HTTP GET request** (**Application Layer**)
    - The application (browser, mail client, etc.) passes your request to the Application Layer.
