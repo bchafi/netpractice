@@ -182,7 +182,7 @@ So, the Application Layer makes sure the browser and Google’s server understan
    - 🌍 Browsing → HTTP/HTTPS
    - 📧 Email → SMTP, IMAP, POP3
    - 🔍 Name resolution → DNS
-   - 📂 File sharing → FTP, SMB
+   - 📂 File sharing → FTP, SMB  
 🟢 How It Works
    - Browser creates an **HTTP GET request** (**Application Layer**)
    - The application (browser, mail client, etc.) passes your request to the Application Layer.
