@@ -217,6 +217,7 @@ It ensures that the data sent by the Application Layer of one system can be **re
 - 📦 **Compression** → Reduces data size to save bandwidth (e.g.ZIP, GIF, JPEG, MP3, MPEG) **File Formats:**. 
 - 🔒 **Encryption / Decryption** → Secures data before transmission (e.g., SSL/TLS for HTTPS).  
  🔹 TLS/SSL Handshake (Simplified)
+
    ```C
       Client                                    Server
       ------                                    ------
@@ -261,8 +262,9 @@ It ensures that the data sent by the Application Layer of one system can be **re
 ## 5️⃣ 🗨️ Session Layer
 
 📍 **What it is:**  
-The **Session Layer** manages and controls the **dialog (sessions)** between two devices.  
-It decides **who talks, when, and for how long**.  
+   \- The **Session Layer** manages and controls the **dialog (sessions)** between two devices. 
+   \- it’s a manager that sits on top of TCP to control the conversation.
+   \- It decides **who talks, when, and for how long**.  
 👉 **Analogy:** Like a **moderator in a meeting**, keeping conversations orderly.  
 
 - Without it → chaos: overlapping talk, broken logins, no crash recovery.  
@@ -289,7 +291,7 @@ It decides **who talks, when, and for how long**.
 ---
 
 ### 📦 Real-Life Examples
-| Technology | Usage |
+| Technology | Usage |  
 |------------|-------|
 | **NetBIOS** | Basic session services |
 | **RPC (Remote Procedure Call)** | Enables function calls over a network |
