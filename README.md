@@ -184,18 +184,14 @@ So, the Application Layer makes sure the browser and Google’s server understan
    - 🔍 Name resolution → DNS
    - 📂 File sharing → FTP, SMB
 🟢 How It Works
-   - You (the user) make a request.
+   - Browser creates an **HTTP GET request** (**Application Layer**)
    - The application (browser, mail client, etc.) passes your request to the Application Layer.
    **The Application Layer:**    
    - Chooses the right protocol (HTTP, SMTP, DNS, etc.)
    - Structures the data so the other computer understands it.
    - It then sends the data down to the Presentation Layer → Transport Layer → Network → and out onto the internet.
    - On the other side, the receiver’s Application Layer interprets the request and delivers it to their app.
-### 🔹 How Data Flows
-1. Browser creates an **HTTP GET request** (**Application Layer**)  
-2. TCP ensures **reliable delivery** (**Transport Layer**)  
-3. IP decides **where to send** (**Network Layer**)  
-4. Ethernet/Wi-Fi sends **signals** (**Data Link & Physical Layers**)  
+   \>**Basically → every time you “use the Internet,” you’re triggering the Application Layer.**
 
 ---
 
