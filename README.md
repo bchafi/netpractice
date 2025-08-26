@@ -296,28 +296,24 @@ It ensures that the data sent by the Application Layer of one system can be **re
 **TCP makes a road:**
    1. Your computer and the server agree: “We can talk. The road is open.” (that’s the TCP handshake).
    2. Session Layer jumps: 
-      It says: “Okay, before we start, let’s set the rules:
 
+      It says: “Okay, before we start, let’s set the rules:
          - Who’s the client (you) and who’s the server.
          - What language/security to use (password, encryption, etc.).
          - How long this talk will last before timeout.”
    3. Session Layer jumps in
-
       - It says: “Okay, before we start, let’s set the rules:
       - Who’s the client (you) and who’s the server.
       - What language/security to use (password, encryption, etc.).
       - How long this talk will last before timeout.”
    4. Authentication happens
-
       - Server: “Who are you?”
       - You: “I’m user123, here’s my password/key.”
       - Server: “Okay, you’re in. Session established.”
    5. Conversation is managed
-
       - Every command you type in SSH now goes through that session.
       - If the connection blips, checkpoints let you resume without starting from zero.
    6. Ending the session
-
       - You type exit.
       - Session Layer: “Conversation is over, close it cleanly.”
       - TCP: removes the road.
