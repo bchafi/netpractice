@@ -262,9 +262,9 @@ It ensures that the data sent by the Application Layer of one system can be **re
 ## 5️⃣ 🗨️ Session Layer
 
 📍 **What it is:**  
-   \- The **Session Layer** manages and controls the **dialog (sessions)** between two devices. 
-   \- it’s a manager that sits on top of TCP to control the conversation.
-   \- It decides **who talks, when, and for how long**.  
+   The **Session Layer** manages and controls the **dialog (sessions)** between two devices. 
+   it’s a manager that sits on top of TCP to control the conversation.
+   It decides **who talks, when, and for how long**.  
 👉 **Analogy:** Like a **moderator in a meeting**, keeping conversations orderly.  
 
 - Without it → chaos: overlapping talk, broken logins, no crash recovery.  
@@ -291,6 +291,35 @@ It ensures that the data sent by the Application Layer of one system can be **re
 ---
 
 ### 📦 Real-Life Examples
+
+
+**TCP makes a road:**
+   1. Your computer and the server agree: “We can talk. The road is open.” (that’s the TCP handshake).
+   2. Session Layer jumps: 
+      It says: “Okay, before we start, let’s set the rules:
+         *Who’s the client (you) and who’s the server.*
+         *What language/security to use (password, encryption, etc.).*
+         *How long this talk will last before timeout.”*
+   3. Session Layer jumps in
+      *It says: “Okay, before we start, let’s set the rules:*
+      *Who’s the client (you) and who’s the server.*
+      *What language/security to use (password, encryption, etc.).*
+      *How long this talk will last before timeout.”*
+   4. Authentication happens
+      *Server: “Who are you?”*
+      *You: “I’m user123, here’s my password/key.”*
+      *Server: “Okay, you’re in. Session established.”*
+   5. Conversation is managed
+      *Every command you type in SSH now goes through that session.*
+      *If the connection blips, checkpoints let you resume without starting from zero.*
+   6. Ending the session
+      *You type exit.*
+      *Session Layer: “Conversation is over, close it cleanly.”*
+      *TCP: removes the road.*
+
+
+
+
 | Technology | Usage |  
 |------------|-------|
 | **NetBIOS** | Basic session services |
