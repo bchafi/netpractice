@@ -323,6 +323,69 @@ It ensures that the data sent by the Application Layer of one system can be **re
       - Session Layer: “Conversation is over, close it cleanly.”
       - TCP: removes the road.
 
+---
+
+## 🚚 Transport Layer (OSI Layer 4)
+
+🔹 **What it is:**  
+The Transport Layer is responsible for the **end-to-end delivery of data** between applications on different devices.  
+It makes sure data is delivered **reliably, in the correct order, and without errors** (if needed).  
+
+---
+
+### 🛠 Main Responsibilities
+- **Multiplex/Demultiplex**
+by ports (many apps share one IP)
+- 📦 **Segmentation & Reassembly**  
+  Breaks large messages into smaller chunks (segments) and reassembles them at the destination.  
+
+- ✅ **Error Detection & Correction**  
+  Ensures data arrives intact; retransmits if necessary.  
+
+- 🔢 **Ordering**  
+  Keeps track of sequence numbers so packets arrive in the correct order.  
+
+- 🎯 **Multiplexing with Ports**  
+  Uses **port numbers** (0–65535) to deliver data to the right application.  
+  Example: Port 80 → Web server, Port 22 → SSH.  
+
+- ⚡ **Flow Control**  
+  Prevents one device from overwhelming another by sending too much data at once.  
+
+---
+
+### 🔑 Core jobs:
+
+- Multiplex/Demultiplex by ports (many apps share one IP)
+
+- Segmentation/Reassembly (break big messages into MSS-sized segments)
+- Reliability & Ordering (TCP) or low overhead (UDP)
+- Flow Control (don’t overrun the receiver)
+- Congestion Control (don’t flood the network)
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 +-------------------------------------------------------------+
