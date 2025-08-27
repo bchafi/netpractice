@@ -292,8 +292,6 @@ It ensures that the data sent by the Application Layer of one system can be **re
 
 ### 📦 Real-Life Examples
 
-
-**TCP makes a road:**
    1. Your computer and the server agree: “We can talk. The road is open.” (that’s the TCP handshake).
    2. Session Layer jumps: 
 
@@ -318,42 +316,42 @@ It ensures that the data sent by the Application Layer of one system can be **re
       - Session Layer: “Conversation is over, close it cleanly.”
       - TCP: removes the road.
 
-
-
-
-| Technology | Usage |  
-|------------|-------|
-| **NetBIOS** | Basic session services |
-| **RPC (Remote Procedure Call)** | Enables function calls over a network |
-| **SQL Sessions** | Manage database connections |
-| **API Sessions** | Authentication with tokens |
-| **SSH / RDP** | Remote login & desktop sessions |
-
-# 🌐 How OSI Layers Work Together
-
-```mermaid
-flowchart TD
-    User["👤 User (You typing in Zoom / SSH / Browser)"]
-
-    A["🟦 Application Layer (L7)<br/>- Apps: Browser, Zoom, SSH<br/>- 'I want to send a message/login'"]
-
-    B["🟩 Presentation Layer (L6)<br/>- Translates, encrypts, compresses<br/>- SSL/TLS, JPEG, MP3<br/>- 'Make it secure & readable'"]
-
-    C["🟨 Session Layer (L5)<br/>- Starts, maintains, ends sessions<br/>- SSH login, SQL session<br/>- 'Who talks, when, how long'"]
-
-    D["🟧 Transport Layer (L4)<br/>- TCP/UDP, ports, reliability<br/>- 'Deliver data safely & in order'"]
-
-    E["🌍 Network + Data Link + Physical<br/>(Internet delivery)<br/>- IP addressing, MAC, cables, Wi-Fi"]
-
-    User --> A --> B --> C --> D --> E
-
-## 📚 Resources
-
-- [RFC 791 – IP](https://www.rfc-editor.org/rfc/rfc791)  
-- [RFC 793 – TCP](https://www.rfc-editor.org/rfc/rfc793)  
-- [OSI Model – Wikipedia](https://en.wikipedia.org/wiki/OSI_model)  
-
----
++-------------------------------------------------------------+
+|                 Application Layer (Layer 7)                 |
+|  - Programs users interact with (Browser, Zoom, Email)       |
+|  - Generates requests (HTTP GET, SQL query, Chat message)    |
+|  - Example: "GET /index.html" or "ssh user@server"          |
++-------------------------------------------------------------+
+                              │
+                              ▼
++-------------------------------------------------------------+
+|                Presentation Layer (Layer 6)                 |
+|  - Translates data formats (JSON, XML, HTML, JPEG, MP3)      |
+|  - Handles encryption (TLS/SSL, AES)                        |
+|  - Handles compression (gzip, video codecs)                 |
+|  - Example: HTTPS encrypts your HTTP request before sending  |
++-------------------------------------------------------------+
+                              │
+                              ▼
++-------------------------------------------------------------+
+|                   Session Layer (Layer 5)                   |
+|  - Manages dialogs: establishes, maintains, terminates       |
+|  - Authenticates users (login sessions, tokens, keys)        |
+|  - Synchronization (checkpoints in file transfer/streaming)  |
+|  - Example: SSH login, SQL session, Zoom call state mgmt     |
++-------------------------------------------------------------+
+                              │
+                              ▼
++-------------------------------------------------------------+
+|                 Transport Layer (Layer 4)                   |
+|  - Ensures reliable delivery (TCP) or fast delivery (UDP)    |
+|  - Breaks data into segments & reassembles on other side     |
+|  - Provides ports (80=HTTP, 443=HTTPS, 22=SSH, 25=SMTP)      |
+|  - Example: TCP 3-way handshake (SYN → SYN-ACK → ACK)        |
++-------------------------------------------------------------+
+                              │
+                              ▼
+             (then continues to Network, Data Link, Physical)
 
 <p align="center">
   Made with ❤️ for learning and practicing <b>Networking Fundamentals</b>
