@@ -329,6 +329,23 @@ It ensures that the data sent by the Application Layer of one system can be **re
 | **API Sessions** | Authentication with tokens |
 | **SSH / RDP** | Remote login & desktop sessions |
 
+# 🌐 How OSI Layers Work Together
+
+```mermaid
+flowchart TD
+    User["👤 User (You typing in Zoom / SSH / Browser)"]
+
+    A["🟦 Application Layer (L7)<br/>- Apps: Browser, Zoom, SSH<br/>- 'I want to send a message/login'"]
+
+    B["🟩 Presentation Layer (L6)<br/>- Translates, encrypts, compresses<br/>- SSL/TLS, JPEG, MP3<br/>- 'Make it secure & readable'"]
+
+    C["🟨 Session Layer (L5)<br/>- Starts, maintains, ends sessions<br/>- SSH login, SQL session<br/>- 'Who talks, when, how long'"]
+
+    D["🟧 Transport Layer (L4)<br/>- TCP/UDP, ports, reliability<br/>- 'Deliver data safely & in order'"]
+
+    E["🌍 Network + Data Link + Physical<br/>(Internet delivery)<br/>- IP addressing, MAC, cables, Wi-Fi"]
+
+    User --> A --> B --> C --> D --> E
 
 ## 📚 Resources
 
