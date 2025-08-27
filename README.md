@@ -10,6 +10,13 @@
 **What it is:**  
 The protocol that defines how devices **identify** and **locate** each other on a network, and how data packets are delivered.
 
+### 📍 Get Your Ip in MacOS Or windows:
+```c
+	curl ifconfig.me
+	\\ OR
+	ipconfig
+```
+
 - **Main role:** Addressing & Routing  
 - **Analogy:** Like a **street address** for your home – tells the postman where to deliver letters.  
 
@@ -315,6 +322,8 @@ It ensures that the data sent by the Application Layer of one system can be **re
       - You type exit.
       - Session Layer: “Conversation is over, close it cleanly.”
       - TCP: removes the road.
+
+
 
 +-------------------------------------------------------------+
 |                 Application Layer (Layer 7)                 |
