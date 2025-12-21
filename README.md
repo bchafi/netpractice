@@ -5,7 +5,7 @@
 </p>
 
 ---
-
+      
 ## 📍 1. IP (Internet Protocol)
 **What it is:**  
 The protocol that defines how devices **identify** and **locate** each other on a network, and how data packets are delivered.
